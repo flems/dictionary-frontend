@@ -1,0 +1,12 @@
+.home {
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        align-items: stretch;
+    
+        @media (min-width: 1440px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}

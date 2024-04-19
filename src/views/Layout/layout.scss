@@ -1,0 +1,21 @@
+.layout {
+    display: flex;
+    width: 100%;
+
+    &__aside {
+        width: 300px;
+        flex-shrink: 0;
+        background-color: #fff;
+        padding: 24px;
+
+        nav {
+            position: sticky;
+            top: 24px;
+        }
+    }
+
+    &__main {
+        flex-grow: 1;
+        padding: 24px;
+    }
+}

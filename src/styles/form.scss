@@ -1,0 +1,57 @@
+.form {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    button {
+        align-self: flex-start;
+    }
+}
+
+.field-error {
+    font-size: max(14px, 0.8em);
+    color: rgb(195, 0, 0);
+}
+
+.input {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &__title {
+        color: #afafaf;
+        font-size: 0.8em;
+        margin: 0;
+    }
+
+    &__input {
+        resize: vertical;
+        height: 32px;
+        font-size: 1em;
+        font-family: inherit;
+        padding: 16px;
+    }
+}
+
+.textarea {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &__title {
+        color: #afafaf;
+        font-size: 0.8em;
+        margin: 0;
+    }
+
+    &__textarea {
+        resize: vertical;
+        height: 80px;
+        font-size: 1em;
+        font-family: inherit;
+        padding: 16px;
+    }
+}
