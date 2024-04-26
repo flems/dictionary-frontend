@@ -2,10 +2,11 @@
 
 import { Caption } from '@/components/ui/Caption/Caption'
 import { ECaptionSize } from '@/components/ui/Caption/caption.interface'
-import { Card } from '@/components/ui/Card/Card'
+// import { Card } from '@/components/ui/Card/Card'
 // import { data } from '@/components/ui/Card/card.example-data'
 import './home.scss'
 import { useCollocations } from './useCollocations'
+import { CollocationCard } from '@/components/CollocationCard/CollocationCard'
 
 
 export default function Home() {
@@ -19,7 +20,7 @@ export default function Home() {
       </Caption>
       <div className="home__content">
         {data.map((item, index) => (
-          <Card item={item} key={index} />
+          <CollocationCard item={item} key={index} />
         ))}
       </div>
     </div>
