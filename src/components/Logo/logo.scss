@@ -1,14 +1,43 @@
 .logo {
+    &--theme-light {
+        --text-color: var(--color-secondary-500);
+    }
+
+    &--theme-dark {
+        --text-color: var(--color-primary-900);
+    }
+
+    &--size-m {
+        --icon-spacer: var(--20px);
+        --font-size: 18px;
+    }
+
+    &--size-m {
+        --icon-spacer: 20px;
+        --font-size: 18px;
+        --icon-size: 30px;
+    }
+
+    &--size-l {
+        --icon-spacer: 10px;
+        --font-size: 24px;
+        --icon-size: 48px;
+    }
+}
+.logo {
     $parent: &;
 
     display: inline-flex;
     align-items: center;
-    gap: 20px;
-    color: #f1f1f1;
+    gap: var(--icon-spacer);
+    color: var(--text-color);
     text-decoration: none;
+    font-size: var(--font-size);
 
     &__icon {
         transition: transform 0.2s ease-in-out;
+        width: var(--icon-size);
+        height: var(--icon-size);
     }
 
     &:hover {

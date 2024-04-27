@@ -1,11 +1,11 @@
 import '@/styles/main.scss'
 import { Layout } from '@/views/Layout/Layout'
 import type { Metadata } from 'next'
-import { Roboto } from 'next/font/google'
+import { Nunito_Sans } from 'next/font/google'
 import { Providers } from './providers'
 import { Toaster } from 'sonner'
 
-const roboto = Roboto({
+const NUNITO_SANS = Nunito_Sans({
   weight: ['300', '400', '500', '700', '900'],
   subsets: ['latin', 'cyrillic'],
   display: 'swap',
@@ -22,9 +22,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
+
   return (
     <html lang='en'>
-      <body className={roboto.className}>
+      <body className={NUNITO_SANS.className}>
         <Providers>
           <Layout>
             {children}
