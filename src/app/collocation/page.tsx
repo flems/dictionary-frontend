@@ -1,12 +1,9 @@
 'use client'
 
-import { Caption } from '@/components/ui/Caption/Caption'
-import { ECaptionSize } from '@/components/ui/Caption/caption.interface'
-// import { Card } from '@/components/ui/Card/Card'
-// import { data } from '@/components/ui/Card/card.example-data'
 import './page.scss'
 import { useCollocations } from './useCollocations'
 import { CollocationCard } from '@/components/CollocationCard/CollocationCard'
+import { Hero } from '@/views/Hero/Hero'
 
 
 export default function Home() {
@@ -15,6 +12,7 @@ export default function Home() {
 
   return (
     <div className='collocation-page'>
+      <Hero title='Collocation' />
       <div className="collocation-page__list">
         {data.map((item, index) => (
           <CollocationCard

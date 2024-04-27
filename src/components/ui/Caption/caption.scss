@@ -3,6 +3,14 @@
     margin-bottom: 1em;
 
     &--size-xl {
+        font-size: 48px;
+    }
+
+    &--size-l {
+        font-size: 40px;
+    }
+
+    &--size-m {
         font-size: 32px;
     }
 }

@@ -1,5 +1,7 @@
 'use client'
 
+import { UiButton } from '@/components/ui/UiButton/UiButton'
+import { EButtonTheme } from '@/components/ui/UiButton/ui-button.interface'
 import { authService } from '@/services/auth.service'
 import { IAuthForm } from '@/types/auth.types'
 import { useMutation } from '@tanstack/react-query'
@@ -8,7 +10,7 @@ import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { toast } from 'sonner'
 
-export function Auth () {
+export function AuthForm () {
     const { register, handleSubmit, reset } = useForm<IAuthForm>({
         mode: 'onChange'
     })
@@ -54,10 +56,12 @@ export function Auth () {
             </label>
 
             <div className='d-flex gap-s'>
-
-                <button className='button' onClick={() => setIsLoginForm(true)} type='submit'>Login</button>
-                <button className='button' onClick={() => setIsLoginForm(false)} type='submit'>Register</button>
-                <button className='button' onClick={() => authService.logout()} type='button'>Logout</button>
+                <UiButton onClick={() => setIsLoginForm(true)} type='submit'>
+                    Login
+                </UiButton>
+                <UiButton theme={EButtonTheme.bordered} onClick={() => setIsLoginForm(false)} type='submit'>
+                    Register
+                </UiButton>
             </div>
         </form>
     )

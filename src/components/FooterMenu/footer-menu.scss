@@ -4,12 +4,14 @@
     gap: 6px;
     font-size: 16px;
     color: #83869a;
+    color: var(--color-primary-200);
     transition: 0.2s ease-in;
     cursor: pointer;
     text-decoration: none;
 
     &:hover {
         color: #e2e2e3;
+        color: var(--color-primary-50);
     }
 }
 

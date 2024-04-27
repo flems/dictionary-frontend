@@ -27,8 +27,10 @@
     }
 
     &__input {
+        border: var(--border-width) solid var(--color-primary-100);
+        border-radius: var(--border-radius);
         resize: vertical;
-        height: 32px;
+        height: 48px;
         font-size: 1em;
         font-family: inherit;
         padding: 16px;
@@ -53,5 +55,7 @@
         font-size: 1em;
         font-family: inherit;
         padding: 16px;
+        border: var(--border-width) solid var(--color-primary-100);
+        border-radius: var(--border-radius);
     }
 }

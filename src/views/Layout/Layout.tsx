@@ -2,15 +2,20 @@
 import './layout.scss'
 import { Aside } from '@/views/Aside/Aside'
 
-export function Layout({
-    children,
-  }: {
+interface ILayout {
+    aside?: boolean
     children: React.ReactNode
-}) {
+}
+
+export function Layout({
+    aside,
+    children,
+}: ILayout) {
+    const addClass = aside ? 'layout--with-aside' : ''
     return (
-        <div className="layout">
+        <div className={`layout ${addClass}`}>
             <Aside customClass="layout__aside" />
             <main className="layout__main">{children}</main>
         </div>
     )
-  }
+}

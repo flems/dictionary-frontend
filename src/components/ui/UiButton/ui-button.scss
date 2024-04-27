@@ -1,0 +1,65 @@
+.ui-button {
+    --font-size: 18px;
+    --padding: 12px 20px;
+    --min-width: 160px;
+
+    &--theme-light {
+        --bg-color: var(--color-secondary-500);
+        --text-color: var(--color-primary-500);
+        --border-color: var(--color-secondary-500);
+
+        &:hover {
+            --bg-color: var(--color-secondary-400);
+            --border-color: var(--color-secondary-400);
+        }
+
+        &:active {
+            --bg-color: var(--color-secondary-300);
+            --border-color: var(--color-secondary-300);
+        }
+    }
+
+    &--theme-dark {
+        --bg-color: var(--color-primary-500);
+        --text-color: var(--color-secondary-500);
+        --border-color: var(--color-primary-500);
+
+        &:hover {
+            --bg-color: var(--color-primary-400);
+            --border-color: var(--color-primary-400);
+        }
+
+        &:active {
+            --bg-color: var(--color-primary-300);
+            --border-color: var(--color-primary-300);
+        }
+    }
+
+    &--theme-bordered {
+        --bg-color: transparent;
+        --text-color: var(--color-primary-500);
+        --border-color: var(--color-primary-500);
+
+        &:hover {
+            --border-color: var(--color-primary-400);
+        }
+
+        &:active {
+            --border-color: var(--color-primary-300);
+        }
+    }
+}
+
+.ui-button {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-size: var(--font-size);
+    border: none;
+    padding: var(--padding);
+    border: none;
+    min-width: var(--min-width);
+    border-radius: var(--border-radius);
+    transition: background 0.1s ease-in;
+    cursor: pointer;
+    border: var(--border-width) solid var(--border-color);
+}

@@ -1,5 +1,6 @@
+import { AuthForm } from '@/views/AuthForm/AuthForm'
 import type { Metadata } from 'next'
-import { Auth } from './Auth'
+// import { Auth } from './Auth'
 
 // import { LoginForm } from '@/views/LoginForm/LoginForm'
 
@@ -8,5 +9,5 @@ export const metadata: Metadata = {
 }
 
 export default function AuthPage () {
-    return <Auth />
+    return <AuthForm />
 }
