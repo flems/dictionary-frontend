@@ -1,0 +1,22 @@
+.aside {
+    display: flex;
+    flex-direction: column;
+    background: #11101d;
+    color: #f1f1f1;
+
+    &__footer {
+        padding-top: 32px;
+        margin-top: 32px;
+        border-top: 1px solid rgb(241, 241, 241, 0.2);
+    }
+
+    &__container {
+        position: sticky;
+        top: 24px;
+        flex-grow: 1;
+    }
+
+    &__header {
+        padding-bottom: 24px;
+    }
+}

@@ -18,11 +18,11 @@ export function CollocationCard ({ item }: {item: ICollocationResponse}) {
             <div className="collocation-card__back">
                 
                 <div className="collocation-card__tools">
-                    <button className='collocation-card__tool-btn collocation-card__tool-btn--edit' disabled>
+                    <button className='collocation-card__tool-btn collocation-card__tool-btn--edit'>
                         <Icon  name={'pencil-line'} strokeWidth={2} />
                     </button>
                     <button className='collocation-card__tool-btn collocation-card__tool-btn--delete' onClick={() => { collocationService.deleteCollocation(item.id)}}>
-                        <Icon  name={'x'} strokeWidth={1.5} />
+                        <Icon  name={'trash-2'} strokeWidth={2} />
                     </button>
                 </div>
 

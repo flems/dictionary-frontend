@@ -1,5 +1,5 @@
 import { collocationService } from '@/services/collocation.service'
-import { ICollocation } from '@/types/collocations.types'
+import { ICollocationResponse } from '@/types/collocations.types'
 import { useQuery } from '@tanstack/react-query'
 import { useState } from 'react'
 
@@ -14,7 +14,7 @@ export function useCollocations () {
 		queryFn: () => collocationService.getAll()
 	})
 
-    const items:ICollocation[] = data?.data || []
+    const items:ICollocationResponse[] = data?.data || []
     // const [items, setItems] = useState<ICollocation[] | undefined>(data?.data)
 
     return items

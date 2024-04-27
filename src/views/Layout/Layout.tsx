@@ -1,6 +1,6 @@
 'use client'
 import './layout.scss'
-import { Sidebar } from './Sidebar'
+import { Aside } from '@/views/Aside/Aside'
 
 export function Layout({
     children,
@@ -9,7 +9,7 @@ export function Layout({
 }) {
     return (
         <div className="layout">
-            <Sidebar customClass="layout__aside" />
+            <Aside customClass="layout__aside" />
             <main className="layout__main">{children}</main>
         </div>
     )

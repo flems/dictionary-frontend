@@ -1,0 +1,19 @@
+.logo {
+    $parent: &;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    color: #f1f1f1;
+    text-decoration: none;
+
+    &__icon {
+        transition: transform 0.2s ease-in-out;
+    }
+
+    &:hover {
+        #{$parent}__icon {
+            transform: rotate(180deg);
+        }
+    }
+}
