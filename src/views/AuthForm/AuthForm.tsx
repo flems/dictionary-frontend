@@ -17,7 +17,7 @@ export function AuthForm () {
 
     const [isLoginForm, setIsLoginForm] = useState(false)
 
-    const { push } = useRouter()
+    const { push, replace } = useRouter()
 
     const { mutate } = useMutation({
         mutationKey: ['auth'],
@@ -25,7 +25,9 @@ export function AuthForm () {
         onSuccess() {
             toast.success('Successfully login!')
             reset()
-            push('/collocation') // cтраница со списком слов
+            replace('/') // cтраница со списком слов
+            console.log(12331232123);
+            
         },
         onError(error) {
             console.log(error)

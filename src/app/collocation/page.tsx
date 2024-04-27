@@ -5,6 +5,8 @@ import { useCollocations } from './useCollocations'
 import { CollocationCard } from '@/components/CollocationCard/CollocationCard'
 import { Hero } from '@/views/Hero/Hero'
 
+export const revalidate = 3600
+
 
 export default function Home() {
   const data = useCollocations()

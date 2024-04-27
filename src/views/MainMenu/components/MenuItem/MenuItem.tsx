@@ -11,7 +11,7 @@ export function MenuItem ({ data }: { data: IMenuItem }) {
     const addClass = currentPath == data.href ? 'is-active' : ''
 
     return (
-        <Link href={data.href} className={`menu-item ${addClass}`}>
+        <Link href={data.href} prefetch className={`menu-item ${addClass}`}>
             <Icon size={24} className='menu-item__icon' name={data.icon} />
             <span className='menu-item__text'>{data.name}</span>
         </Link>
